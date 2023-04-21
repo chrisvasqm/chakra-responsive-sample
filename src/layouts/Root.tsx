@@ -7,15 +7,14 @@ function Root() {
     <Grid templateColumns='repeat(12, 1fr)' bg='gray.50'>
       <GridItem
         as='aside'
-        colSpan={2}
+        colSpan={{ base: 12, lg: 4, xl: 2 }}
         bg={'purple.400'}
-        minHeight='100vh'
-        w={[100, 200]}
+        minHeight={{ base: '100px', lg: '100vh' }}
         p='30px'
       >
         <span>sidebar</span>
       </GridItem>
-      <GridItem as='main' colSpan={10} p='40px'>
+      <GridItem as='main' colSpan={{ base: 12, lg: 8, xl: 10 }} p='40px'>
         <Navbar />
         <Outlet />
       </GridItem>
